@@ -1,6 +1,6 @@
 .navbar {
 	min-height: 70px;
-	background-color: #335B40;
+	background-color: #00464f;
 }
 .navbar-brand {
 	padding: 0 15px;
@@ -102,7 +102,7 @@ nav.sidebar, .container-main{
 /* Hamburger */
 .navbar-toggle {
     background-color: transparent;
-    border: 1px solid rgba(126, 169, 39, 0.4);
+    border: 1px solid rgba(126, 169, 39, 0.5);
 }
 .navbar-toggle .icon-bar,
 .navbar-toggle .icon-bar + .icon-bar {
@@ -118,10 +118,11 @@ nav:hover .forAnimate{
 }
 
 .nav li.separator {
-    padding: 10px 15px;
+    padding: 5px 5px;
     text-transform: uppercase;
+	
     background-color: rgba(0, 0, 39, 0.2);
-    color: rgba(208, 208, 207, 0.4);
+    color: rgba(211, 211, 211,1);
 }
 
 /* .....NavBar: Icon only with coloring/layout.....*/
@@ -135,7 +136,7 @@ nav:hover .forAnimate{
         width: calc(100% - 40px); /*keeps 100% minus nav size*/
         margin-left: 40px;
         float: right;
-		height: 100%;
+		height: calc(height=100%);
     }
 
     /*lets nav bar to be showed on mouseover*/
@@ -181,12 +182,12 @@ nav:hover .forAnimate{
     /*gives sidebar width/height*/
     nav.sidebar{
         width: 300px;
-        height: 100%;
+        height: calc(height=100%);
         margin-left: -260px;
         float: left;
-        z-index: 8000;
+        z-index: 2;
         margin-bottom: 0px;
-		position: static;
+		position: absolute;
     }
 
     /*give sidebar 100% width;*/
@@ -240,4 +241,11 @@ nav:hover .forAnimate{
 	.container-main{
 		height: 100%;
 	}
+}
+
+li.divider{
+	color: white;
+	background: rgba(4,102,30,0.30)
+	
+	
 }
