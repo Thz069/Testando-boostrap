@@ -13,6 +13,7 @@
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<link href="../css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css" />
 	<link href="../cdn.materialdesignicons.com/2.0.46/css/materialdesignicons.min.css" media="all" rel="stylesheet" type="text/css"/>
+	  <script src="../js/calendar inite.js"></script>
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 9]>
@@ -22,7 +23,7 @@
   <!-- TemplateBeginEditable name="head" -->
   <!-- TemplateEndEditable -->
   </head>
-  <body style="padding-top: 70px">
+  <body style="padding-top: 70px;" onLoad="init()">
 
   <nav class="navbar navbar-default navbar-fixed-top col-lg-offset-0 col-lg-12">
     <div class="container-fluid">
@@ -67,95 +68,85 @@
             </button>
             <a class="navbar-brand" href="#">Centrais Experimentais Multiusuário</a></div>
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <!-- pagina inicial -->
-                <li class="active open"> <a href="#"> <span class="pull-right hidden-xs showopacity glyphicon material-icons">home</span> Pagina Inicial</a></li>
-               
-                <li class="separator">Equipamentos</li>
-                <li class="divider text-center esp">Divisões de São Bernardo do Campo</li>
-                <!-- divisão 1 -->
-              <li class="divimag"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon material-icons">label</span> BioImageamento&nbsp; <span class="caret"></span> </a>
-                  <ul class="dropdown-menu forAnimate" role="menu">
-                        <li><a href="#"><i class="material-icons">add</i> Add</a></li>
-                        <li><a href="#"><i class="material-icons">sort</i> List</a></li>
-                    </ul>
-                </li>
-                <li class="divider text-center esp">Divisões de Santo André</li>
-                <!-- divisão 2 -->
-                <li class=""><a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span style="font-size:16px;" class="menu-icon pull-right hidden-xs showopacity glyphicon material-icons">label</span>Estrutura e Morfologia &nbsp;<span class="caret"></span> </a>
-                  <ul class="dropdown-menu forAnimate" role="menu">
-                        <li><a href="#"><i class="material-icons">add</i> Add</a></li>
-                        <li><a href="#"><i class="material-icons">sort</i> List</a></li>
-                  </ul>
-                </li>
-                <!-- divisão 3 -->
-                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon material-icons">label</span>Espectroscopias Óptica e Vibracional&nbsp;<span class="caret"></span> </a>
-                  <ul class="dropdown-menu forAnimate" role="menu">
-                      <li><a href="#"> <em class="material-icons">add</em> Add</a></li>
-                      <li><a href="#"> <i class="material-icons">sort</i> List</a></li>
-                    </ul>
-                </li>
-                <!--Divisão 4-->
-                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon material-icons">label</span>Técnicas de Química Analítica&nbsp;<span class="caret"></span> </a>
-                  <ul class="dropdown-menu forAnimate" role="menu">
-                      <li><a href="#"> <em class="material-icons">add</em> Add</a></li>
-                      <li><a href="#"> <i class="material-icons">sort</i> List</a></li>
-                    </ul>
-                </li>
-                <!--Divisão 5-->
-                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon material-icons">label</span>Propriedades Térmicas&nbsp;<span class="caret"></span> </a>
-                  <ul class="dropdown-menu forAnimate" role="menu">
-                      <li><a href="#"> <em class="material-icons">add</em> Add</a></li>
-                      <li><a href="#"> <i class="material-icons">sort</i> List</a></li>
-                    </ul>
-                </li>
-                <!--Divisão 6-->
-                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon material-icons">label</span>Propriedades Magnéticas e Criogenia&nbsp;<span class="caret"></span> </a>
-                  <ul class="dropdown-menu forAnimate" role="menu">
-                      <li><a href="#"> <em class="material-icons">add</em> Add</a></li>
-                      <li><a href="#"> <i class="material-icons">sort</i> List</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon material-icons">label</span> Equipamentos de apoio&nbsp;<span class="caret"></span> </a>
-                  <ul class="dropdown-menu forAnimate" role="menu">
-                      <li><a href="#"> <em class="material-icons">add</em> Add</a></li>
-                      <li><a href="#"> <i class="material-icons">sort</i> List</a></li>
-                    </ul>
-                </li>
-                <li class="separator"></li>
-                <li class=""> <a href="#"> <span class="pull-right hidden-xs showopacity glyphicon material-icons">info</span> Sobre Nós</a></li>
-                <li class=""> <a href="#"> <span class="pull-right hidden-xs showopacity glyphicon material-icons">timeline</span> Estatisticas sobre a CEM</a></li>
-                <li class=""> <a href="#"> <span class="pull-right hidden-xs showopacity glyphicon material-icons">contact phone</span> Contato</a></li>
-                <li class="separator">Area do usuário</li>
-                <!-- Users -->
-                <li class="#">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <span class="menu-icon pull-right hidden-xs showopacity glyphicon material-icons">group</span>
-                        Login <span class="caret"></span>
-                    </a>
-                    <ul class="dropdown-menu forAnimate" role="menu">
-                        <li><a href="#"><i class="material-icons">add</i> Add</a></li>
-                        <li><a href="#"><i class="material-icons">sort</i> List</a></li>
-                    </ul>
-                </li>
-                <!-- Exit -->
-                <li>
-                    <a href="#">
-                        <span class="menu-icon pull-right hidden-xs showopacity glyphicon material-icons">tv</span> Perfil do Usuário</a>
-                </li>
+        <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1"><!-- TemplateBeginEditable name="Sidenav" -->
+        <ul class="nav navbar-nav">
+          <!-- pagina inicial -->
+          <li class="active open"> <a href="#"> <span class="pull-right hidden-xs showopacity glyphicon material-icons">home</span> Pagina Inicial</a></li>
+          <li class="separator">Equipamentos</li>
+          <li class="divider text-center esp">Divisões de São Bernardo do Campo</li>
+          <!-- divisão 1 -->
+          <li class="divimag"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon material-icons">label</span> BioImageamento&nbsp; <span class="caret"></span></a>
+            <ul class="dropdown-menu forAnimate" role="menu">
+              <li><a href="#"><i class="material-icons">add</i> Add</a></li>
+              <li><a href="#"><i class="material-icons">sort</i> List</a></li>
             </ul>
-        </div>
+          </li>
+          <li class="divider text-center esp">Divisões de Santo André</li>
+          <!-- divisão 2 -->
+          <li class=""><a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span style="font-size:16px;" class="menu-icon pull-right hidden-xs showopacity glyphicon material-icons">label</span>Estrutura e Morfologia &nbsp;<span class="caret"></span></a>
+            <ul class="dropdown-menu forAnimate" role="menu">
+              <li><a href="#"><i class="material-icons">add</i> Add</a></li>
+              <li><a href="#"><i class="material-icons">sort</i> List</a></li>
+            </ul>
+          </li>
+          <!-- divisão 3 -->
+          <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon material-icons">label</span>Espectroscopias Óptica e Vibracional&nbsp;<span class="caret"></span></a>
+            <ul class="dropdown-menu forAnimate" role="menu">
+              <li><a href="#"> <em class="material-icons">add</em> Add</a></li>
+              <li><a href="#"> <i class="material-icons">sort</i> List</a></li>
+            </ul>
+          </li>
+          <!--Divisão 4-->
+          <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon material-icons">label</span>Técnicas de Química Analítica&nbsp;<span class="caret"></span></a>
+            <ul class="dropdown-menu forAnimate" role="menu">
+              <li><a href="#"> <em class="material-icons">add</em> Add</a></li>
+              <li><a href="#"> <i class="material-icons">sort</i> List</a></li>
+            </ul>
+          </li>
+          <!--Divisão 5-->
+          <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon material-icons">label</span>Propriedades Térmicas&nbsp;<span class="caret"></span></a>
+            <ul class="dropdown-menu forAnimate" role="menu">
+              <li><a href="#"> <em class="material-icons">add</em> Add</a></li>
+              <li><a href="#"> <i class="material-icons">sort</i> List</a></li>
+            </ul>
+          </li>
+          <!--Divisão 6-->
+          <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon material-icons">label</span>Propriedades Magnéticas e Criogenia&nbsp;<span class="caret"></span></a>
+            <ul class="dropdown-menu forAnimate" role="menu">
+              <li><a href="#"> <em class="material-icons">add</em> Add</a></li>
+              <li><a href="#"> <i class="material-icons">sort</i> List</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon material-icons">label</span> Equipamentos de apoio&nbsp;<span class="caret"></span></a>
+            <ul class="dropdown-menu forAnimate" role="menu">
+              <li><a href="#"> <em class="material-icons">add</em> Add</a></li>
+              <li><a href="#"> <i class="material-icons">sort</i> List</a></li>
+            </ul>
+          </li>
+          <li class="separator"></li>
+          <li class=""> <a href="#"> <span class="pull-right hidden-xs showopacity glyphicon material-icons">info</span> Sobre Nós</a></li>
+          <li class=""> <a href="#"> <span class="pull-right hidden-xs showopacity glyphicon material-icons">timeline</span> Estatisticas sobre a CEM</a></li>
+          <li class=""> <a href="#"> <span class="pull-right hidden-xs showopacity glyphicon material-icons">contact phone</span> Contato</a></li>
+          <li class="separator">Area do usuário</li>
+          <!-- Users -->
+          <li class="#"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <span class="menu-icon pull-right hidden-xs showopacity glyphicon material-icons">group</span> Login <span class="caret"></span> </a>
+            <ul class="dropdown-menu forAnimate" role="menu">
+              <li><a href="#"><i class="material-icons">add</i> Add</a></li>
+              <li><a href="#"><i class="material-icons">sort</i> List</a></li>
+            </ul>
+          </li>
+          <!-- Exit -->
+          <li> <a href="#"> <span class="menu-icon pull-right hidden-xs showopacity glyphicon material-icons">tv</span> Perfil do Usuário</a> </li>
+        </ul>
+        <!-- TemplateEndEditable --></div>
     </div>
-</nav>
-    <!-- TemplateBeginEditable name="Conteudo" -->
+</nav>  
   <div class="container-fluid  container-main"><!--entre com o conteudo aqui-->
-  	
+  	<!-- TemplateBeginEditable name="Conteudo" -->
   	
   	
   	<!-- TemplateEndEditable -->
-  	
-  </div>
+  	</div>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="../js/jquery-1.11.3.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
